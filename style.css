@@ -51,17 +51,26 @@ body {
     max-width: 258px;
 }
 
-#check-button {
-    background: var(--primary-color);
+.button {
+    background: rgb(58, 199, 235);
     border: none;
     color: #fff;
     padding: 0.7rem 1rem;
-    border-radius: 0.5rem;
+    border-radius:10px;
     font-size: large;
     cursor: pointer;
     outline: #fff;
     margin: auto;
     display: block;
+    
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  border-radius: 10px;
 }
 
 #error-message {

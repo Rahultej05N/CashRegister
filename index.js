@@ -3,8 +3,25 @@ const checkButton = document.querySelector("#check-button");
 const givenCash = document.querySelector("#given-cash");
 const message = document.querySelector("#error-message");
 const notes = document.querySelectorAll(".no-of-notes");
+const notes1 = document.querySelectorAll(".no-of-notes1");
+const availableNotes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
+let input = document.querySelector("#given-cash");
+let button = document.querySelector("#check-button");
 
-const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
+
+
+button.disabled = true;
+
+input.addEventListener("change", stateHandle);
+
+function stateHandle() {
+	if (document.querySelector(".input").value === "") {
+		button.disabled = true;
+	} else {
+		button.disabled = false;
+	}
+}
+
 
 checkButton.addEventListener("click",
     function validateBillAndGivenCash() {
@@ -14,7 +31,9 @@ checkButton.addEventListener("click",
                 const amountToBeReturnAmount = givenCash.value - billAmount.value;
                 console.log(amountToBeReturnAmount)
                 calculateNotes(amountToBeReturnAmount);
-            } else {
+            } 
+            
+            else if(givenCash.value < billAmount.value){
                 showMsg("Check the bill Sir!")
             }
         } else {
@@ -31,6 +50,7 @@ function calculateNotes(amountToBeReturnAmount) {
     }
 }
 
+
 function hideMessage() {
     message.style.display = "none";
 }
@@ -39,3 +59,7 @@ function showMsg(msg) {
     message.style.display = "block";
     message.innerText = msg
 }
+
+
+
+

@@ -87,16 +87,24 @@ button[disabled]{
     margin: auto;
 }
 
+
 .change-table caption {
     margin: 1rem auto;
     font-size: x-large;
     font-weight: 500;
 }
 
-th,
-td {
+th {
     border: 2px solid var(--primary-color);
     width: 0%;
     border-collapse: collapse;
-    padding: 0.4rem;
+    padding: 0.5rem;
+    
 }
+.sideheading{
+    margin-right:918px;
+    margin-top: 12px;
+    
+}
+
+

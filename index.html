@@ -18,15 +18,17 @@
             </p>
 
             <label for="bill-amount" class="input-label">Amount Bill: </label>
-            <input type="text" class="input" id="bill-amount" placeholder="Enter bill amount">
+            <input type="number" class="input" id="bill-amount" placeholder="Enter bill amount">
 
             <label for="given-cash" class="input-label">Given cash: </label>
-            <input type="text" class="input" id="given-cash" placeholder="Enter given cash">
-            <button id="check-button" class="button">Check</button>
+            <input type="number" class="input" id="given-cash" placeholder="Enter given cash">
+            <button id="check-button" class="button" disabled>Check</button>
             <p id="error-message"></p>
-            <caption>Return Change</caption>
-
+            
+           
+            
             <table class="change-table">
+                <div ><h4 class="sideheading">Return Change:</h4></div>
                 <tbody>
                     <tr>
                         <th>No of Notes</th>
@@ -56,8 +58,43 @@
                     </tr>
                 </tbody>
             </table>
-
+        
             
+    <br/>
+    
+
+            <table class="change-table">
+                <div> <h4 class="sideheading">(or) Ask for:</h4>  </div>
+                <tbody>
+                    <tr>
+                        <th>No of Notes</th>
+                        <th class="no-of-notes1"></th>
+                        <th class="no-of-notes1"></th>
+                        <th class="no-of-notes1"></th>
+                        <th class="no-of-notes1"></th>
+                        <th class="no-of-notes1"></th>
+                        <th class="no-of-notes1"></th>
+                        <th class="no-of-notes1"></th>
+                        <th class="no-of-notes1"></th>
+                        <th class="no-of-notes1"></th>
+
+                    </tr>
+
+                    <tr>
+                        <th>Note</th>
+                        <th>2000</th>
+                        <th>500</th>
+                        <th>200</th>
+                        <th>100</th>
+                        <th>50</th>
+                        <th>20</th>
+                        <th>10</th>
+                        <th>5</th>
+                        <th>1</th>
+                    </tr>
+                </tbody>
+            </table>
+        
         </div>
     </main>
     </body>
